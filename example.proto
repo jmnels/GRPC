@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+message Number {
+  string dict = 1;
+  float value = 2;
+}
+
+service Bank1 {
+  rpc query (Number) returns (Number) {}
+
+  rpc deposit (Number) returns (Number) {}
+
+  rpc withdraw (Number) returns (Number) {}
+
+  rpc propogate (Number) returns (Number) {}
+}
+
+service Bank2 {
+  rpc query (Number) returns (Number) {}
+
+  rpc deposit (Number) returns (Number) {}
+
+  rpc withdraw (Number) returns (Number) {}
+
+  rpc propogate (Number) returns (Number) {}
+}
